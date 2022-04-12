@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CompoundWidget id="BuildVersionIntermediate" width="565" height="120" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Widgets>
+		<Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxIntermediateVersionInfo" top="0" left="0" width="565" height="120" zIndex="1" text="$IAT/VersionInfo/VersionInfo" borderWidth="1px" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" bold="true" textAlign="left" margin="0px 0px 0px 0px">
+			<Widgets>
+				<Widget xsi:type="widgets.brease.Label" id="LabelLastTransfer" top="3" left="14" height="20" zIndex="0" text="$IAT/VersionInfo/LastTransfer" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.Label" id="LabelPCName" top="30" left="14" height="20" zIndex="1" text="$IAT/VersionInfo/PCName" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.Label" id="LabelASVersion" top="56" left="14" height="20" zIndex="2" text="$IAT/VersionInfo/ASVersion" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.Label" id="LabelBranch" top="3" left="309" height="20" zIndex="3" text="$IAT/VersionInfo/Branch" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.Label" id="LabelCommitPastTag" top="30" left="309" width="84" height="20" zIndex="4" text="$IAT/VersionInfo/CommitsPastTag" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.TextOutput" id="TextOutputPCName" top="30" left="110" width="171" height="20" zIndex="5" fontSize="12px" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.TextOutput" id="TextOutputASVersion" top="56" left="110" width="171" height="20" zIndex="6" fontSize="12px" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.TextOutput" id="TextOutputBranch" top="3" left="404" width="171" height="20" zIndex="7" fontSize="12px" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutputLastBuild" top="3" left="110" width="201" height="20" zIndex="8" textAlign="left" fontSize="12px" bold="true" padding="0px" />
+				<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputCommitsPast" top="30" left="404" width="171" height="20" zIndex="9" unitAlign="right" fontSize="12px" bold="true" padding="0px" />
+			</Widgets>
+		</Widget>
+  </Widgets>
+	<Properties>
+		<Property xsi:type="StructureBindableProperty" name="value" type="BuildVersionType" category="data" readOnly="false" required="false" >
+			<Description>Structure binding</Description>
+			<Mappings>
+				<!--<Mapping widget="DateTimeOutputLastBuild" property="value" type="Number" mode="oneWay" memberPath="Project.BuildDate" mapToNode="false" />-->
+				<Mapping widget="TextOutputASVersion" property="value" type="String" mode="oneWay" memberPath="Project.ASVersion" mapToNode="false" />	
+				<Mapping widget="TextOutputPCName" property="value" type="String" mode="oneWay" memberPath="Project.UserName" mapToNode="false" />
+				<Mapping widget="TextOutputBranch" property="value" type="String" mode="oneWay" memberPath="Git.Branch" mapToNode="false" />				
+				<Mapping widget="NumericOutputCommitsPast" property="value" type="Number" mode="oneWay" memberPath="Git.AdditionalCommits" mapToNode="false" />				
+			</Mappings>
+		</Property>
+	</Properties>
+
+  <Events>
+    <!--
+    <Event name="">
+      <Description>Description will be shown in property grid.</Description>
+      <Mappings>
+        <Mapping widget="" event="" />
+      </Mappings>
+    </Event>
+    -->
+  </Events>
+
+  <Actions>
+    <!--
+    <Action name="">
+      <Description>Description will be shown in property grid.</Description>
+      <Mappings>
+        <Mapping widget="" action="" />
+      </Mappings>
+    </Action>
+    -->
+  </Actions>
+
+  <EventBindings>
+    <!-- source and target can only be widgets within the compound widget.
+    <EventBinding id="">
+      <Source xsi:type="widget.Event" widgetRefId="" event="" />
+      <EventHandler condition="">
+        <Action>
+          <Target xsi:type="widget.Action" widgetRefId="">
+            <Method name="" value="" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    -->
+  </EventBindings>
+
+</CompoundWidget>
