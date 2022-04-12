@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CompoundWidget id="BuildVersionIntermediate" width="565" height="120" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CompoundWidget id="BuildVersionStandard" width="565" height="120" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Widgets>
 		<Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxIntermediateVersionInfo" top="0" left="0" width="565" height="120" zIndex="1" text="$IAT/VersionInfo/VersionInfo" borderWidth="1px" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" bold="true" textAlign="left" margin="0px 0px 0px 0px">
 			<Widgets>
