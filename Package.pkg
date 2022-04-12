@@ -4,8 +4,8 @@
   <Objects>
     <Object Type="File" Description="Widget Library Description">Description.widgetlibrary</Object>
     <Object Type="Package" Description="Resources">Resources</Object>
-    <Object Type="Package">BuildVersionAdv</Object>
     <Object Type="Package">BuildVersionBasic</Object>
-    <Object Type="Package">BuildVersionIntermediate</Object>
+    <Object Type="Package">BuildVersionStandard</Object>
+    <Object Type="Package">BuildVersionAdvanced</Object>
   </Objects>
 </Package>

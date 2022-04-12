@@ -1,63 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<CompoundWidget id="BuildVersionBasic" width="335" height="120" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Widgets>
-		<Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxAdvVersionInfo" top="0" left="0" width="335" height="120" zIndex="1" text="$IAT/VersionInfo/VersionInfo" borderWidth="1px" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" bold="true" textAlign="left" margin="0px 0px 0px 0px">
-			<Widgets>
-				<Widget xsi:type="widgets.brease.Label" id="LabelLastTransfer" top="3" left="14" height="20" zIndex="0" text="$IAT/VersionInfo/LastTransfer" bold="true" padding="0px" />
-				<Widget xsi:type="widgets.brease.Label" id="LabelPCName" top="30" left="14" height="20" zIndex="1" text="$IAT/VersionInfo/PCName" bold="true" padding="0px" />
-				<Widget xsi:type="widgets.brease.Label" id="LabelASVersion" top="56" left="14" height="20" zIndex="2" text="$IAT/VersionInfo/ASVersion" bold="true" padding="0px" />
-				<Widget xsi:type="widgets.brease.TextOutput" id="TextOutputPCName" top="30" left="110" width="171" height="20" zIndex="3" fontSize="12px" bold="true" padding="0px" />
-				<Widget xsi:type="widgets.brease.TextOutput" id="TextOutputASVersion" top="56" left="110" width="171" height="20" zIndex="4" fontSize="12px" bold="true" padding="0px" />
-				<Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutputLastBuild" top="3" left="110" width="201" height="20" zIndex="5" textAlign="left" fontSize="12px" bold="true" padding="0px" />
-			</Widgets>
-		</Widget>
+<?xml version="1.0" encoding="utf-8"?>
+<CompoundWidget id="BuildVersionBasic" width="550" height="30" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="LabelBuildVersionBasic" top="0" left="0" width="150" zIndex="0" text="Build Version" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutProjectName" top="0" left="150" width="150" height="18" zIndex="1" ellipsis="true" value="WireBender" textAlign="center" padding="0px 5px" tooltip="Automation Studio Project Name" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelProject" top="18" left="150" width="150" height="12" zIndex="2" text="PROJECT" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" tooltip="Automation Studio Project Name" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputVersion" top="0" left="300" height="18" zIndex="3" ellipsis="true" value="1.2.3-4" textAlign="center" padding="0px 5px" tooltip="&lt;tag&gt;-&lt;additional_commits&gt;" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelVersion" top="18" left="300" width="100" height="12" zIndex="4" text="VERSION" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" tooltip="&lt;tag&gt;-&lt;additional_commits&gt;" />
+    <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutputGitCommit" top="0" left="400" width="150" height="18" zIndex="5" format="yyyy-MM-dd HH:mm:ss" bold="false" padding="0px 5px" tooltip="Latest Commit Date" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelCommitDate" top="18" left="400" width="150" height="12" zIndex="6" text="DATE" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" tooltip="Latest Commit Date" />
   </Widgets>
-	<Properties>
-		<Property xsi:type="StructureBindableProperty" name="value" type="BuildVersionProjectType" category="data" readOnly="false" required="false" >
-			<Description>Structure binding</Description>
-			<Mappings>
-				<Mapping widget="DateTimeOutputLastBuild" property="value" type="Number" mode="oneWay" memberPath="BuildDate" mapToNode="false" />
-				<Mapping widget="TextOutputASVersion" property="value" type="String" mode="oneWay" memberPath="ASVersion" mapToNode="false" />	
-				<Mapping widget="TextOutputPCName" property="value" type="String" mode="oneWay" memberPath="UserName" mapToNode="false" />			
-			</Mappings>
-		</Property>
-	</Properties>
-
+  <Properties>
+    <Property xsi:type="StructureBindableProperty" name="value" type="BuildVersionType" category="Data" readOnly="false" required="false" >
+      <Description>Build version information</Description>
+      <Mappings>
+        <Mapping widget="TextOutProjectName" type="String" property="value" mode="oneWay" memberPath="Project.ProjectName" mapToNode="false"/>
+        <Mapping widget="TextOutputVersion" type="String" property="value" mode="oneWay" memberPath="Git.Version" mapToNode="false"/>
+        <Mapping widget="DateTimeOutputGitCommit" type="DateTime" property="value" mode="oneWay" memberPath="Git.CommitDate" mapToNode="false"/>
+      </Mappings>
+    </Property>
+  </Properties>
   <Events>
-    <!--
-    <Event name="">
-      <Description>Description will be shown in property grid.</Description>
-      <Mappings>
-        <Mapping widget="" event="" />
-      </Mappings>
-    </Event>
-    -->
   </Events>
-
   <Actions>
-    <!--
-    <Action name="">
-      <Description>Description will be shown in property grid.</Description>
-      <Mappings>
-        <Mapping widget="" action="" />
-      </Mappings>
-    </Action>
-    -->
   </Actions>
-
   <EventBindings>
-    <!-- source and target can only be widgets within the compound widget.
-    <EventBinding id="">
-      <Source xsi:type="widget.Event" widgetRefId="" event="" />
-      <EventHandler condition="">
-        <Action>
-          <Target xsi:type="widget.Action" widgetRefId="">
-            <Method name="" value="" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    -->
   </EventBindings>
-
 </CompoundWidget>
