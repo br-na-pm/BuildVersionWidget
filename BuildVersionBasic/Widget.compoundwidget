@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CompoundWidget id="BuildVersionBasic" width="550" height="30" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CompoundWidget id="BuildVersionBasic" width="550" height="30" description="550 x 30 basic build version banner" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="LabelBuildVersionBasic" top="0" left="0" width="150" zIndex="0" text="Build Version" fontSize="20px" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutProjectName" top="0" left="150" width="150" height="18" zIndex="1" ellipsis="true" value="WireBender" textAlign="center" padding="0px 5px" tooltip="Automation Studio Project Name" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelProject" top="18" left="150" width="150" height="12" zIndex="2" text="PROJECT" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" tooltip="Automation Studio Project Name" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputVersion" top="0" left="300" height="18" zIndex="3" ellipsis="true" value="1.2.3-4" textAlign="center" padding="0px 5px" tooltip="&lt;tag&gt;-&lt;additional_commits&gt;" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelVersion" top="18" left="300" width="100" height="12" zIndex="4" text="VERSION" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" tooltip="&lt;tag&gt;-&lt;additional_commits&gt;" />
-    <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutputGitCommit" top="0" left="400" width="150" height="18" zIndex="5" format="yyyy-MM-dd HH:mm:ss" bold="false" padding="0px 5px" tooltip="Latest Commit Date" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelCommitDate" top="18" left="400" width="150" height="12" zIndex="6" text="DATE" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" tooltip="Latest Commit Date" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelBuildVersionBasic" top="0" left="0" width="150" height="30" zIndex="0" text="Build Version" fontSize="20px" padding="0px 15px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutProjectName" top="0" left="150" width="150" height="18" zIndex="1" ellipsis="true" value="WireBender" textAlign="center" fontSize="14px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelProject" top="18" left="150" width="150" height="12" zIndex="2" text="PROJECT" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputVersion" top="0" left="300" height="18" zIndex="3" ellipsis="true" value="1.2.3-4" textAlign="center" fontSize="14px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelVersion" top="18" left="300" width="100" height="12" zIndex="4" text="VERSION" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutputGitCommit" top="0" left="400" width="150" height="18" zIndex="5" format="yyyy-MM-dd HH:mm:ss" bold="false" fontSize="14px" padding="0px 5px" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelCommitDate" top="18" left="400" width="150" height="12" zIndex="6" text="DATE" textColor="rgba(0, 0, 0, 0.7)" textAlign="center" fontSize="12px" padding="0px 5px" />
   </Widgets>
   <Properties>
     <Property xsi:type="StructureBindableProperty" name="value" type="BuildVersionType" category="Data" readOnly="false" required="false" >
