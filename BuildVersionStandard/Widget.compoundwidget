@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CompoundWidget id="BuildVersionStandard" width="500" height="100" description="500 x 100 build version information block" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CompoundWidget id="BuildVersionStandard" width="500" height="100" description="500 x 100 build version information table" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="LabelBuildVersion" top="0" left="0" width="200" height="25" zIndex="0" text="Build Version" textAlign="center" fontSize="20px" padding="0px 15px" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelBuildVersion" top="0" left="0" width="250" height="25" zIndex="0" text="Build Version" textAlign="center" fontSize="20px" padding="0px 15px" />
     <Widget xsi:type="widgets.brease.Label" id="LabelProject" top="25" left="0" width="100" height="25" zIndex="1" text="PROJECT" textColor="rgba(0, 0, 0, 0.7)" textAlign="right" fontSize="12px" padding="0px 5px" />
     <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputProject" top="25" left="100" width="150" height="25" zIndex="2" ellipsis="true" value="WireBender" fontSize="14px" padding="0px 5px" />
     <Widget xsi:type="widgets.brease.Label" id="LabelConfiguration" top="50" left="0" width="100" height="25" zIndex="3" text="CONFIGURATION" textColor="rgba(0, 0, 0, 0.7)" textAlign="right" fontSize="11px" padding="0px 5px" />
